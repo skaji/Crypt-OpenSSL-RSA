@@ -640,12 +640,6 @@ use_pkcs1_oaep_padding(p_rsa)
   CODE:
     p_rsa->padding = RSA_PKCS1_OAEP_PADDING;
 
-void
-use_sslv23_padding(p_rsa)
-    rsaData* p_rsa;
-  CODE:
-    p_rsa->padding = RSA_SSLV23_PADDING;
-
 # Sign text. Returns the signature.
 
 SV*

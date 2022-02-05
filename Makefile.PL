@@ -24,6 +24,7 @@ WriteMakefile(
     'OBJECT' => 'RSA.o',
     'LIBS'   => [openssl_lib_paths() . ' -lssl -lcrypto'],
     'DEFINE' => '-DPERL5 -DOPENSSL_NO_KRB5',
+    'CCFLAGS' => "-Wno-deprecated-declarations",
 
     # perl-5.8/gcc-3.2 needs -DPERL5, and redhat9 likes -DOPENSSL_NO_KRB5
     'INC' => openssl_inc_paths(),    # e.g., '-I/usr/include/other'
